@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow"><!-- PRÉVIA: remover esta linha quando o site for publicado de verdade -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prya - Centro de Beleza e Estética</title>
+<meta name="description" content="Prya - Centro de Beleza e Estética, em Icaraí, Niterói (RJ). Cabelo, unhas, sobrancelha e cílios, maquiagem, podologia e depilação, com 38 profissionais cuidando de você desde 2008.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --fundo:#FBF3F1;
+  --fundo2:#F5E6E8;
+  --texto:#3E2A2E;
+  --suave:#7D6469;
+  --destaque:#B76E79;
+  --botao:#9C4F5C;
+  --botao-escuro:#843f4b;
+  --dourado:#C9A36B;
+  --cartao:#FFFAF9;
+  --borda:rgba(183,110,121,.28);
+  --raio:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',system-ui,sans-serif;background:var(--fundo);color:var(--texto);line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.15}
+.container{width:100%;max-width:1100px;margin:0 auto;padding:0 20px}
+section{padding:84px 0;position:relative}
+.eyebrow{display:block;color:var(--destaque);text-transform:uppercase;letter-spacing:.22em;font-size:.76rem;font-weight:800;margin-bottom:10px}
+.titulo{font-size:clamp(2rem,5.5vw,3rem);margin-bottom:14px;font-weight:600}
+.titulo::after{content:"";display:block;width:64px;height:2px;background:linear-gradient(90deg,var(--destaque),var(--dourado));margin-top:16px;border-radius:2px}
+.centro{text-align:center}
+.centro .titulo::after{margin-left:auto;margin-right:auto}
+.sub{color:var(--suave);max-width:640px;margin-bottom:38px}
+.centro .sub{margin-left:auto;margin-right:auto}
+.alt{background:var(--fundo2)}
+
+/* Separador entre seções */
+.sep{height:0;display:flex;justify-content:center;position:relative;z-index:3}
+.sep span{transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:var(--cartao);border:1px solid var(--borda);display:grid;place-items:center;color:var(--destaque);box-shadow:0 6px 16px rgba(156,79,92,.12)}
+.sep svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linejoin:round}
+
+/* Botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--botao);color:#fff;font-family:inherit;font-size:1rem;font-weight:700;text-decoration:none;padding:15px 30px;border-radius:999px;border:2px solid var(--botao);cursor:pointer;transition:transform .2s,background .2s,box-shadow .2s,color .2s;box-shadow:0 10px 26px rgba(156,79,92,.28)}
+.btn:hover{background:var(--botao-escuro);border-color:var(--botao-escuro);transform:translateY(-2px)}
+.btn.contorno{background:transparent;color:var(--botao);box-shadow:none}
+.btn.contorno:hover{background:var(--botao);color:#fff;border-color:var(--botao)}
+.btn svg{width:20px;height:20px;fill:currentColor;flex:none}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:70px 0;color:#fff;
+  background:linear-gradient(rgba(62,42,46,.52),rgba(156,79,92,.58)),url("img/fundo-salao.jpg") center/cover no-repeat;background-color:var(--botao)}
+.hero .container{display:flex;flex-direction:column;align-items:center}
+.hero h1{margin-bottom:24px}
+.hero h1 img{width:min(300px,66vw);height:auto;margin:0 auto;filter:drop-shadow(0 4px 18px rgba(62,42,46,.35))}
+.hero .slogan{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(1.8rem,6vw,3rem);line-height:1.15;margin-bottom:14px;text-shadow:0 2px 16px rgba(62,42,46,.4)}
+.hero .frase{max-width:560px;margin-bottom:30px;font-size:1.05rem;text-shadow:0 1px 10px rgba(62,42,46,.45)}
+.hero .acoes{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.hero .btn.contorno{color:#fff;border-color:#fff}
+.hero .btn.contorno:hover{background:#fff;color:var(--botao);border-color:#fff}
+.nota{display:inline-flex;align-items:center;gap:8px;margin-top:36px;padding:9px 20px;border:1px solid rgba(255,255,255,.55);border-radius:999px;font-size:.92rem;background:rgba(62,42,46,.32);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.nota .estrelas{color:#F3DDB0;letter-spacing:2px}
+
+/* SOBRE */
+.sobre-grid{display:grid;gap:36px}
+.sobre p{color:var(--suave);margin-bottom:16px;font-size:1.02rem}
+.sobre p strong{color:var(--texto)}
+.difs{list-style:none;display:grid;gap:12px;align-content:start}
+.difs li{display:flex;gap:12px;align-items:flex-start;background:var(--cartao);border:1px solid var(--borda);padding:15px 18px;border-radius:14px;font-size:.96rem}
+.difs li::before{content:"✦";color:var(--destaque);flex:none;line-height:1.6}
+.numeros{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:44px;padding:28px 14px;background:var(--fundo2);border-radius:var(--raio);border:1px solid var(--borda);text-align:center}
+.numeros .n{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,7vw,3.6rem);font-weight:700;line-height:1;color:var(--botao)}
+.numeros .l{font-size:.85rem;color:var(--suave);margin-top:6px;text-transform:uppercase;letter-spacing:.12em;font-weight:700}
+
+/* SERVIÇOS */
+.cards{display:grid;gap:18px;grid-template-columns:1fr}
+.card{background:var(--fundo);border:1px solid var(--borda);border-radius:var(--raio);padding:12px 12px 22px;transition:transform .25s,box-shadow .25s,border-color .25s;box-shadow:0 8px 24px rgba(156,79,92,.07)}
+.card:hover{transform:translateY(-4px);border-color:var(--destaque);box-shadow:0 14px 30px rgba(156,79,92,.14)}
+.card .foto{aspect-ratio:4/3;border-radius:14px;overflow:hidden;margin-bottom:16px;background:var(--fundo2)}
+.card .foto img{width:100%;height:100%;object-fit:cover}
+.card .foto.icone{display:grid;place-items:center;background:linear-gradient(145deg,var(--fundo2),#fff4f2)}
+.card .foto.icone svg{width:64px;height:64px;fill:none;stroke:var(--destaque);stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:1.55rem;margin-bottom:6px;color:var(--botao);padding:0 8px}
+.card p{color:var(--suave);font-size:.95rem;padding:0 8px}
+
+/* EQUIPE */
+.time-foto{border-radius:var(--raio);overflow:hidden;box-shadow:0 18px 40px rgba(156,79,92,.2);margin-bottom:30px}
+.time-foto img{width:100%;aspect-ratio:16/8;object-fit:cover;object-position:center 30%}
+.filtros{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:30px}
+.chip{font-family:inherit;font-size:.92rem;font-weight:700;color:var(--botao);background:transparent;border:1.5px solid var(--borda);padding:9px 20px;border-radius:999px;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.chip:hover{border-color:var(--destaque)}
+.chip.ativo{background:var(--botao);color:#fff;border-color:var(--botao)}
+.equipe-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.pro{background:var(--cartao);border:1px solid var(--borda);border-radius:var(--raio);padding:22px 12px 20px;text-align:center;transition:transform .25s,box-shadow .25s}
+.pro:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(156,79,92,.13)}
+.pro img{width:min(100%,128px);aspect-ratio:1/1;height:auto;object-fit:cover;object-position:center 22%;border-radius:50%;border:2px solid var(--destaque);padding:3px;background:var(--fundo);margin:0 auto 14px}
+.pro h3{font-size:1.3rem;margin-bottom:2px}
+.pro .funcao{display:block;font-size:.68rem;text-transform:uppercase;letter-spacing:.14em;font-weight:800;color:var(--botao);margin-bottom:8px}
+.pro p{font-size:.88rem;color:var(--suave);line-height:1.4;margin-bottom:10px}
+.pro a{font-size:.84rem;font-weight:700;color:var(--botao);text-decoration:none;overflow-wrap:anywhere}
+.pro a:hover{text-decoration:underline}
+.mais-wrap{text-align:center;margin-top:34px}
+
+/* TRABALHO */
+.galeria{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.galeria figure{position:relative;border-radius:var(--raio);overflow:hidden;aspect-ratio:4/5;box-shadow:0 12px 30px rgba(156,79,92,.16);background:var(--fundo)}
+.galeria img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.galeria figure:hover img{transform:scale(1.04)}
+.galeria figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 16px 14px;color:#fff;font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;background:linear-gradient(transparent,rgba(62,42,46,.62))}
+.galeria .reservado{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;padding:18px;background:transparent;border:1.5px dashed var(--destaque);box-shadow:none;color:var(--suave)}
+.galeria .reservado svg{width:34px;height:34px;fill:none;stroke:var(--destaque);stroke-width:1.4;stroke-linejoin:round}
+.galeria .reservado strong{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--botao);line-height:1.2}
+.galeria .reservado span{font-size:.85rem}
+
+/* AVALIAÇÕES */
+.prova{max-width:560px;margin:0 auto;text-align:center;background:var(--cartao);border:1px solid var(--borda);border-radius:28px;padding:44px 28px;box-shadow:0 18px 44px rgba(156,79,92,.13)}
+.prova .grande{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(4.5rem,16vw,6.5rem);line-height:1;color:var(--botao)}
+.stars{display:inline-block;font-size:1.7rem;letter-spacing:5px;background:linear-gradient(90deg,var(--dourado) var(--p,100%),#e8d6d4 var(--p,100%));-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;margin:6px 0 10px}
+.prova .total{font-size:1.1rem;font-weight:700;margin-bottom:6px}
+.prova .txt{color:var(--suave);margin-bottom:26px;font-size:.96rem}
+
+/* CONTATO */
+.contato{text-align:center}
+.contato .sub,.contato .titulo::after{margin-left:auto;margin-right:auto}
+.contato .titulo{font-size:clamp(2rem,5.5vw,3.2rem)}
+.contato-lista{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin:6px 0 46px}
+.info{display:grid;gap:16px;text-align:center;max-width:960px;margin:0 auto}
+.info-card{background:var(--cartao);border:1px solid var(--borda);border-radius:var(--raio);padding:26px 20px;display:flex;flex-direction:column;align-items:center;gap:8px}
+.info-card h3{font-size:1.5rem;color:var(--botao)}
+.info-card address{font-style:normal;color:var(--suave);font-size:.95rem}
+.info-card .btn{margin-top:8px;padding:11px 22px;font-size:.92rem}
+.info-card .tel{font-weight:800;font-size:1.15rem;text-decoration:none;color:var(--texto)}
+.horas{width:100%;max-width:280px}
+.horas .linha{display:flex;justify-content:space-between;gap:10px;font-size:.95rem;padding:6px 0;border-bottom:1px solid rgba(183,110,121,.2)}
+.horas .linha:last-child{border-bottom:0}
+.horas .linha span:first-child{font-weight:700}
+.horas .linha span:last-child{color:var(--botao);font-weight:700}
+
+/* RODAPÉ */
+footer{padding:44px 0 96px;text-align:center;border-top:1px solid var(--borda);color:var(--suave);font-size:.9rem}
+footer img{height:64px;width:auto;margin:0 auto 14px}
+footer .creditos{font-size:.74rem;margin-top:12px;opacity:.85;line-height:1.5}
+footer .creditos a{text-decoration:underline}
+
+/* WHATSAPP FLUTUANTE */
+.zap{position:fixed;right:18px;bottom:18px;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(62,42,46,.35);z-index:50;transition:transform .2s}
+.zap:hover{transform:scale(1.08)}
+.zap svg{width:32px;height:32px;fill:#fff}
+
+@media(min-width:700px){
+  .cards{grid-template-columns:repeat(3,1fr);gap:22px}
+  .difs{grid-template-columns:1fr 1fr}
+  .equipe-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+  .galeria{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+  .info{grid-template-columns:repeat(3,1fr)}
+}
+@media(min-width:1000px){
+  .sobre-grid{grid-template-columns:1.1fr 1fr;gap:60px;align-items:center}
+  .difs{grid-template-columns:1fr}
+  .equipe-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* CELULAR: layout compacto, parecido com o desktop */
+@media(max-width:699px){
+  section{padding:48px 0}
+  .container{padding:0 14px}
+  .titulo{font-size:1.9rem;margin-bottom:10px}
+  .titulo::after{margin-top:12px;width:52px}
+  .eyebrow{font-size:.68rem}
+  .sub{margin-bottom:22px;font-size:.9rem}
+  .sep span{width:36px;height:36px}
+  .sep svg{width:17px;height:17px}
+  .btn{padding:12px 20px;font-size:.88rem}
+  .hero{min-height:88svh;padding:50px 0}
+  .hero .frase{font-size:.95rem;margin-bottom:24px}
+  .hero .acoes{gap:10px}
+  .nota{font-size:.8rem;margin-top:26px;padding:8px 14px}
+  .sobre-grid{gap:20px}
+  .sobre p{font-size:.94rem}
+  .difs{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .difs li{padding:10px;font-size:.78rem;gap:8px}
+  .numeros{margin-top:28px;padding:18px 6px;gap:6px}
+  .numeros .l{font-size:.62rem;letter-spacing:.06em}
+  .cards{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+  .card{padding:6px 6px 12px;border-radius:14px}
+  .card .foto{aspect-ratio:1/1;border-radius:10px;margin-bottom:8px}
+  .card .foto.icone svg{width:34px;height:34px}
+  .card h3{font-size:1rem;padding:0 2px;margin-bottom:4px;line-height:1.15}
+  .card p{font-size:.64rem;line-height:1.35;padding:0 2px}
+  .time-foto{margin-bottom:20px;border-radius:14px}
+  .time-foto img{aspect-ratio:16/10}
+  .filtros{gap:6px;margin-bottom:20px}
+  .chip{font-size:.74rem;padding:7px 12px}
+  .equipe-grid{gap:8px}
+  .pro{padding:14px 8px 14px;border-radius:14px}
+  .pro img{width:min(100%,92px);margin-bottom:10px}
+  .pro h3{font-size:1.1rem}
+  .pro .funcao{font-size:.58rem;letter-spacing:.1em;margin-bottom:5px}
+  .pro p{font-size:.74rem;margin-bottom:6px}
+  .pro a{font-size:.72rem}
+  .mais-wrap{margin-top:22px}
+  .galeria{gap:8px}
+  .galeria figure{border-radius:14px}
+  .galeria figcaption{font-size:1rem;padding:26px 10px 10px}
+  .galeria .reservado strong{font-size:1.05rem}
+  .galeria .reservado span{font-size:.72rem}
+  .prova{padding:30px 16px;border-radius:20px}
+  .stars{font-size:1.4rem}
+  .contato-lista{gap:8px;margin-bottom:30px}
+  .info{gap:10px}
+  .info-card{padding:18px 14px}
+  .info-card h3{font-size:1.3rem}
+  footer{padding:30px 0 90px}
+  footer img{height:52px}
+}
+</style>
+<link rel="icon" type="image/png" href="img/logo.png">
+<style id="fx-efeitos">
+.fx-revelar .fx-palavra{display:inline-block;opacity:0;filter:blur(10px);transform:translateY(8px);
+  animation:fx-revelar .7s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(var(--i)*90ms)}
+@keyframes fx-revelar{to{opacity:1;filter:blur(0);transform:none}}
+.fx-surgir{opacity:0;transform:translateY(26px);filter:blur(4px);transition:opacity .7s ease,transform .7s ease,filter .7s ease;
+  transition-delay:calc(var(--fx-i,0)*90ms)}
+.fx-surgir.fx-visivel{opacity:1;transform:none;filter:none}
+.fx-preencher{position:relative;overflow:hidden;isolation:isolate;transition:color .35s,transform .15s}
+.fx-preencher::before{content:"";position:absolute;z-index:-1;left:var(--fx-x,50%);top:var(--fx-y,50%);width:0;height:0;border-radius:50%;
+  background:var(--destaque);transform:translate(-50%,-50%);transition:width .45s ease,height .45s ease}
+.fx-preencher:hover{color:#111!important}
+.fx-preencher:hover::before{width:260%;height:600%}
+.fx-preencher:active{transform:scale(.96)}
+@media (prefers-reduced-motion:reduce){
+  [class*="fx-"],[class*="fx-"]::before,[class*="fx-"]::after,.fx-palavra{animation:none!important;transition:none!important}
+  .fx-revelar .fx-palavra,.fx-surgir{opacity:1!important;filter:none!important;transform:none!important}
+}
+</style>
+<style>
+/* ABERTURA (cortina) */
+.abertura{position:fixed;inset:0;z-index:1000;background:#381421;display:flex;align-items:center;justify-content:center;animation:ab-sobe .9s cubic-bezier(.7,0,.2,1) 1.6s forwards}
+.abertura .ab-logo{position:relative;width:min(220px,55vw);animation:ab-nasce 1s ease-out both}
+.abertura .ab-logo img{width:100%;display:block}
+.abertura .ab-brilho{position:absolute;inset:0;-webkit-mask:url(img/logo-branco.png) center/contain no-repeat;mask:url(img/logo-branco.png) center/contain no-repeat;background:linear-gradient(105deg,transparent 35%,#ffe7a8 50%,transparent 65%) -200% 0/250% 100% no-repeat;animation:ab-passa 1.1s ease-in-out .5s forwards}
+.hero h1,.hero .frase,.hero .acoes,.hero .nota{animation:ab-surge .7s ease-out both}
+.hero h1{animation-delay:2.2s}.hero .frase{animation-delay:2.5s}.hero .acoes{animation-delay:2.65s}.hero .nota{animation-delay:2.8s}
+@keyframes ab-sobe{to{transform:translateY(-100%)}}
+@keyframes ab-nasce{from{opacity:0;filter:blur(10px);transform:scale(.92)}to{opacity:1;filter:none;transform:none}}
+@keyframes ab-passa{to{background-position:200% 0}}
+@keyframes ab-surge{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+/* REELS */
+.reels-dest{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;max-width:640px;margin:0 auto 22px}
+.reels-fila{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;max-width:1040px;margin:0 auto}
+.reel{position:relative;display:block;width:100%;aspect-ratio:9/16;border:0;padding:0;border-radius:var(--raio);overflow:hidden;background:#2a1418;cursor:pointer;box-shadow:var(--sombra);transition:transform .25s}
+.reel:hover{transform:translateY(-4px)}
+.reel:focus-visible{outline:3px solid var(--dourado);outline-offset:3px}
+.reel video{width:100%;height:100%;object-fit:cover;display:block}
+.reel::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 60%,rgba(56,20,33,.55))}
+.reel .rv-play{position:absolute;right:10px;bottom:10px;z-index:2;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center}
+.reel .rv-play svg{width:16px;height:16px;fill:var(--botao);margin-left:2px}
+.reel.dest{box-shadow:0 0 0 3px var(--dourado),var(--sombra)}
+.rv-selo{position:absolute;top:12px;left:12px;z-index:2;background:var(--dourado);color:#3E2A2E;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:999px}
+.rv-modal{position:fixed;inset:0;z-index:900;background:rgba(30,12,18,.94);display:none;align-items:center;justify-content:center}
+.rv-modal.aberto{display:flex}
+.rv-modal video{height:min(88vh,calc(92vw*16/9));max-width:92vw;aspect-ratio:9/16;border-radius:18px;background:#000}
+.rv-modal button{position:absolute;border:0;border-radius:50%;width:48px;height:48px;background:rgba(255,255,255,.14);color:#fff;font-size:26px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.rv-modal button:hover{background:rgba(255,255,255,.28)}
+.rv-fechar{top:16px;right:16px}.rv-ant{left:16px;top:50%;transform:translateY(-50%)}.rv-prox{right:16px;top:50%;transform:translateY(-50%)}
+@media(max-width:700px){
+  .reels-dest{gap:12px;margin-bottom:14px}
+  .reels-fila{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -14px;padding:4px 14px 10px;scrollbar-width:none}
+  .reels-fila::-webkit-scrollbar{display:none}
+  .reels-fila .reel{flex:0 0 38%;scroll-snap-align:start}
+  .rv-selo{font-size:.6rem;padding:4px 9px;top:8px;left:8px}
+  .reel .rv-play{width:30px;height:30px;right:7px;bottom:7px}
+  .rv-ant,.rv-prox{top:auto!important;bottom:18px;transform:none!important}
+}
+@media(prefers-reduced-motion:reduce){.abertura{display:none}.hero h1,.hero .frase,.hero .acoes,.hero .nota{animation:none}}
+</style>
+<style>
+/* MENU (páginas Início e Serviços) */
+.menu{position:absolute;top:0;left:0;right:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px max(20px,4vw)}
+.menu .m-logo img{height:34px;width:auto;filter:drop-shadow(0 2px 10px rgba(62,42,46,.35))}
+.menu nav{display:flex;gap:26px;margin-left:auto}
+.menu nav a{color:#fff;text-decoration:none;font-weight:700;font-size:.92rem;letter-spacing:.04em;text-shadow:0 1px 8px rgba(62,42,46,.5);padding:6px 0;border-bottom:2px solid transparent;transition:border-color .25s}
+.menu nav a:hover,.menu nav a[aria-current="page"]{border-color:var(--dourado)}
+.menu nav a:focus-visible{outline:2px solid var(--dourado);outline-offset:4px}
+.sem-abertura .hero h1,.sem-abertura .hero .frase,.sem-abertura .hero .acoes,.sem-abertura .hero .nota{animation:none!important}
+.ver-todos{text-align:center;margin-top:34px}
+@media(max-width:700px){.menu{padding:14px 14px}.menu nav{gap:16px}.menu nav a{font-size:.8rem}.menu .m-logo img{height:26px}.ver-todos{margin-top:22px}}
+</style>
+</head>
+<body>
+<div class="abertura" id="abertura" aria-hidden="true"><div class="ab-logo"><img src="img/logo-branco.png" alt=""><div class="ab-brilho"></div></div></div>
+<script>if(/servicos\.html/.test(document.referrer)){var _a=document.getElementById("abertura");if(_a)_a.remove();document.documentElement.classList.add("sem-abertura");}</script>
+
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ico-wa" viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24s8.24 3.7 8.24 8.24-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></symbol>
+  <symbol id="ico-brilho" viewBox="0 0 24 24"><path d="M12 3l1.9 5.6L19.5 10.5l-5.6 1.9L12 18l-1.9-5.6L4.5 10.5l5.6-1.9z"/><path d="M19 3v3M17.5 4.5h3"/></symbol>
+</svg>
+
+<header class="hero" id="topo">
+  <div class="menu"><nav aria-label="Menu principal">
+  <a href="#topo" aria-current="page">Início</a>
+  <a href="servicos.html">Serviços</a>
+  <a href="#equipe">Equipe</a>
+  <a href="#contato">Contato</a>
+</nav></div>
+  <div class="container">
+    <h1><img src="img/logo-branco.png" alt="Prya - Centro de Beleza e Estética"></h1>
+    <p class="slogan fx-revelar">Onde beleza e bem-estar se encontram</p>
+    <p class="frase">Beleza com propósito. Experiência com cuidado. Desde 2008, cuidando de pessoas com atenção, técnica e verdade.</p>
+    <div class="acoes">
+      <a class="btn" href="https://wa.me/5521973867220" target="_blank" rel="noopener">
+        <svg aria-hidden="true"><use href="#ico-wa"/></svg>
+        Fale com a gente
+      </a>
+      <a class="btn contorno fx-preencher" href="#servicos">Conheça os serviços</a>
+    </div>
+    <div class="nota"><span class="estrelas">★★★★★</span> Nota <span class="fx-contador" data-valor="4.7" data-casas="1">4,7</span> no Google · <span class="fx-contador" data-valor="406">406</span> avaliações</div>
+  </div>
+</header>
+
+<div class="sep" aria-hidden="true"><span><svg viewBox="0 0 24 24"><use href="#ico-brilho"/></svg></span></div>
+
+<section class="sobre" id="sobre">
+  <div class="container">
+    <div class="sobre-grid">
+      <div>
+        <span class="eyebrow">Sobre a Prya</span>
+        <h2 class="titulo fx-revelar">Mais que um salão: um espaço de acolhimento</h2>
+        <p class="fx-surgir">A Prya nasceu em 2008 do desejo de cuidar de pessoas. É um espaço de acolhimento, transformação e bem-estar, onde cada atendimento é conduzido com atenção, técnica e verdade.</p>
+        <p class="fx-surgir">Cada cliente é recebida em sua singularidade, com a proposta de fazer diferença na <strong>beleza</strong>, na <strong>autoestima</strong> e na <strong>confiança</strong>.</p>
+      </div>
+      <ul class="difs fx-surgir">
+        <li>Equipe unida por ética, transparência, respeito e excelência</li>
+        <li>Ampla variedade de serviços de beleza e bem-estar em um só lugar</li>
+        <li>Atendimento com atenção, técnica e verdade, desde 2008</li>
+        <li>Espaço de acolhimento que recebe cada cliente em sua singularidade</li>
+      </ul>
+    </div>
+    <div class="numeros fx-surgir">
+      <div><div class="n">2008</div><div class="l">Cuidando desde</div></div>
+      <div><div class="n"><span class="fx-contador" data-valor="38">38</span></div><div class="l">Profissionais</div></div>
+      <div><div class="n"><span class="fx-contador" data-valor="4.7" data-casas="1">4,7</span></div><div class="l">Nota no Google</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="sep" aria-hidden="true"><span><svg viewBox="0 0 24 24"><use href="#ico-brilho"/></svg></span></div>
+
+<section class="alt" id="servicos">
+  <div class="container">
+    <div class="centro fx-surgir">
+      <span class="eyebrow">Serviços</span>
+      <h2 class="titulo">Cuidados para você, em um só lugar</h2>
+      <p class="sub">Beleza e bem-estar reunidos, com atenção ao seu estilo, à sua rotina e à saúde de cada detalhe.</p>
+    </div>
+    <div class="cards">
+      <article class="card fx-surgir">
+        <div class="foto"><img src="img/banco-hair-stylist-salon-blow-dry-woman-1.jpg" alt="Cabeleireira finalizando o cabelo de uma cliente" loading="lazy"></div>
+        <h3>Cabelo</h3>
+        <p>Corte, coloração, tratamentos e finalização, respeitando o estilo, a rotina e a saúde do cabelo. Também mega hair e realinhamento térmico.</p>
+      </article>
+      <article class="card fx-surgir">
+        <div class="foto"><img src="img/banco-eyebrow-lamination-lash-extension-close--1.jpg" alt="Olhar com cílios e sobrancelhas bem cuidados" loading="lazy"></div>
+        <h3>Sobrancelha e Cílios</h3>
+        <p>Design de sobrancelhas, brow lamination, micropigmentação e cuidados para cílios.</p>
+      </article>
+      <article class="card fx-surgir">
+        <div class="foto"><img src="img/banco-manicure-nails-gel-polish-close-up-1.jpg" alt="Unhas com esmaltação em gel" loading="lazy"></div>
+        <h3>Unhas</h3>
+        <p>Manicure, pedicure, alongamentos em fibra, gel, acrigel e porcelana, nail art e SPA dos pés.</p>
+      </article>
+      <article class="card fx-surgir">
+        <div class="foto"><img src="img/banco-makeup-artist-applying-makeup-woman-1.jpg" alt="Maquiadora aplicando maquiagem em uma cliente" loading="lazy"></div>
+        <h3>Maquiagem</h3>
+        <p>Produções casuais, sociais, temáticas e para noivas, além de penteados.</p>
+      </article>
+      <article class="card fx-surgir">
+        <div class="foto"><img src="img/banco-podiatry-foot-care-spa-1.jpg" alt="Profissional cuidando dos pés de uma cliente" loading="lazy"></div>
+        <h3>Podologia</h3>
+        <p>Cuidado especializado para a saúde, o conforto e o bem-estar dos pés.</p>
+      </article>
+      <article class="card fx-surgir">
+        <div class="foto"><img src="img/banco-smooth-legs-skin-care-spa-1.jpg" alt="Profissional fazendo depilação nas pernas de uma cliente" loading="lazy"></div>
+        <h3>Depilação</h3>
+        <p>Atendimento com atenção, conforto e respeito à sensibilidade da pele.</p>
+      </article>
+    </div>
+    <div class="ver-todos"><a class="btn contorno fx-preencher" href="servicos.html">Ver todos os serviços</a></div>
+  </div>
+</section>
+
+<div class="sep" aria-hidden="true"><span><svg viewBox="0 0 24 24"><use href="#ico-brilho"/></svg></span></div>
+
+<section id="equipe">
+  <div class="container">
+    <div class="centro">
+      <span class="eyebrow">Nossa equipe</span>
+      <h2 class="titulo fx-revelar">38 profissionais, um só jeito de cuidar</h2>
+      <p class="sub">Uma equipe unida por ética, transparência, respeito e excelência, reunindo em um só lugar cabelo, unhas, sobrancelha, maquiagem, podologia e depilação.</p>
+    </div>
+    <div class="time-foto fx-surgir"><img src="img/time-prya-largo.jpg" alt="Equipe da Prya reunida" loading="lazy"></div>
+
+    <div class="filtros fx-surgir" role="group" aria-label="Filtrar equipe por área">
+      <button type="button" class="chip ativo" data-filtro="todas" aria-pressed="true">Todas</button>
+      <button type="button" class="chip" data-filtro="cabelo" aria-pressed="false">Cabelo</button>
+      <button type="button" class="chip" data-filtro="unhas" aria-pressed="false">Unhas</button>
+      <button type="button" class="chip" data-filtro="sobrancelha" aria-pressed="false">Sobrancelha e Depilação</button>
+      <button type="button" class="chip" data-filtro="podologia" aria-pressed="false">Podologia</button>
+    </div>
+
+    <div class="equipe-grid fx-surgir">
+      <article class="pro" data-area="cabelo"><img src="img/equipe-adriana-monteiro.jpg" alt="Adriana Monteiro" loading="lazy"><h3>Adriana Monteiro</h3><span class="funcao">Cabeleireira</span><p>Cor, corte e tratamentos</p><a href="https://www.instagram.com/drimonteiroprya/" target="_blank" rel="noopener">@drimonteiroprya</a></article>
+      <article class="pro" data-area="podologia"><img src="img/equipe-ana-paula.jpg" alt="Ana Paula" loading="lazy"><h3>Ana Paula</h3><span class="funcao">Podóloga</span><p>Saúde dos pés e unhas</p><a href="https://www.instagram.com/anapaulapodologiaprya/" target="_blank" rel="noopener">@anapaulapodologiaprya</a></article>
+      <article class="pro" data-area="cabelo"><img src="img/equipe-andreia.jpg" alt="Andreia" loading="lazy"><h3>Andreia</h3><span class="funcao">Cabeleireira</span><p>Mega hair</p><a href="https://www.instagram.com/sejaprya/" target="_blank" rel="noopener">@sejaprya</a></article>
+      <article class="pro" data-area="cabelo"><img src="img/equipe-angelica-freitas.jpg" alt="Angélica Freitas" loading="lazy"><h3>Angélica Freitas</h3><span class="funcao">Cabeleireira</span><p>Cor, corte e maquiagem</p><a href="https://www.instagram.com/angelicagfreitas/" target="_blank" rel="noopener">@angelicagfreitas</a></article>
+      <article class="pro" data-area="cabelo"><img src="img/equipe-cezar-castro.jpg" alt="Cezar Castro" loading="lazy"><h3>Cezar Castro</h3><span class="funcao">Cabeleireiro</span><p>Realinhamento térmico e tratamentos</p><a href="https://www.instagram.com/cezarprya/" target="_blank" rel="noopener">@cezarprya</a></article>
+      <article class="pro" data-area="cabelo"><img src="img/equipe-cinthia-ramos.jpg" alt="Cinthia Ramos" loading="lazy"><h3>Cinthia Ramos</h3><span class="funcao">Cabeleireira</span><p>Coloração</p><a href="https://www.instagram.com/cinthiaramoshair/" target="_blank" rel="noopener">@cinthiaramoshair</a></article>
+      <article class="pro" data-area="unhas"><img src="img/equipe-claudia-melo.jpg" alt="Claudia Melo" loading="lazy"><h3>Claudia Melo</h3><span class="funcao">Nail designer</span><p>Alongamentos</p><a href="https://www.instagram.com/cllaumellooo/" target="_blank" rel="noopener">@cllaumellooo</a></article>
+      <article class="pro" data-area="cabelo"><img src="img/equipe-elaine-lima.jpg" alt="Elaine Lima" loading="lazy"><h3>Elaine Lima</h3><span class="funcao">Cabeleireira</span><p>Cor, corte e maquiagem</p><a href="https://www.instagram.com/elaine_vlimaa/" target="_blank" rel="noopener">@elaine_vlimaa</a></article>
+      <article class="pro" data-area="unhas"><img src="img/equipe-elena-melo.jpg" alt="Elena Melo" loading="lazy"><h3>Elena Melo</h3><span class="funcao">Nail designer</span><p>Alongamentos</p><a href="https://www.instagram.com/elenamellonails/" target="_blank" rel="noopener">@elenamellonails</a></article>
+      <article class="pro" data-area="cabelo"><img src="img/equipe-erica-goncalves.jpg" alt="Erica Gonçalves" loading="lazy"><h3>Erica Gonçalves</h3><span class="funcao">Cabeleireira</span><p>Corte e tratamentos</p><a href="https://www.instagram.com/erikasagon/" target="_blank" rel="noopener">@erikasagon</a></article>
+      <article class="pro" data-area="unhas"><img src="img/equipe-fabiana.jpg" alt="Fabiana" loading="lazy"><h3>Fabiana</h3><span class="funcao">Manicure</span><p>Cutilagem e esmaltação</p><a href="https://www.instagram.com/fabynails10/" target="_blank" rel="noopener">@fabynails10</a></article>
+      <article class="pro" data-area="cabelo"><img src="img/equipe-fabricio.jpg" alt="Fabrício" loading="lazy"><h3>Fabrício</h3><span class="funcao">Cabeleireiro</span><p>Cor e corte</p><a href="https://www.instagram.com/fabricioprya/" target="_blank" rel="noopener">@fabricioprya</a></article>
+      <article class="pro" data-area="cabelo"><img src="img/equipe-guilherme-alencar.jpg" alt="Guilherme Alencar" loading="lazy"><h3>Guilherme Alencar</h3><span class="funcao">Cabeleireiro</span><p>Corte e mega hair</p><a href="https://www.instagram.com/guitzalencar/" target="_blank" rel="noopener">@guitzalencar</a></article>
+      <article class="pro" data-area="unhas"><img src="img/equipe-helena-santos.jpg" alt="Helena Santos" loading="lazy"><h3>Helena Santos</h3><span class="funcao">Nail designer</span><p>Fibra e gel</p><a href="https://www.instagram.com/helenaprya/" target="_blank" rel="noopener">@helenaprya</a></article>
+      <article class="pro" data-area="cabelo"><img src="img/equipe-isaac-alves.jpg" alt="Isaac Alves" loading="lazy"><h3>Isaac Alves</h3><span class="funcao">Cabeleireiro</span><p>Cor, corte e maquiagem</p><a href="https://www.instagram.com/isaacalvesprya/" target="_blank" rel="noopener">@isaacalvesprya</a></article>
+      <article class="pro" data-area="cabelo"><img src="img/equipe-jessica-alves.jpg" alt="Jessica Alves" loading="lazy"><h3>Jessica Alves</h3><span class="funcao">Cabeleireira</span><p>Tratamentos</p><a href="https://www.instagram.com/jessicaalvez/" target="_blank" rel="noopener">@jessicaalvez</a></article>
+      <article class="pro" data-area="cabelo"><img src="img/equipe-karoline-nascimento.jpg" alt="Karoline Nascimento" loading="lazy"><h3>Karoline Nascimento</h3><span class="funcao">Cabeleireira</span><p>Cor, corte e visagismo</p><a href="https://www.instagram.com/karolnascimentobeauty/" target="_blank" rel="noopener">@karolnascimentobeauty</a></article>
+      <article class="pro" data-area="cabelo"><img src="img/equipe-leandra-felisberto.jpg" alt="Leandra Felisberto" loading="lazy"><h3>Leandra Felisberto</h3><span class="funcao">Cabeleireira</span><p>Cor, loiros, maquiagem e penteados</p><a href="https://www.instagram.com/leandrafelisbertoo/" target="_blank" rel="noopener">@leandrafelisbertoo</a></article>
+      <article class="pro" data-area="unhas"><img src="img/equipe-leilania.jpg" alt="Leilania" loading="lazy"><h3>Leilania</h3><span class="funcao">Manicure</span><p>Cutilagem e esmaltação</p><a href="https://www.instagram.com/sejaprya/" target="_blank" rel="noopener">@sejaprya</a></article>
+      <article class="pro" data-area="sobrancelha"><img src="img/equipe-lena-felix.jpg" alt="Lena Felix" loading="lazy"><h3>Lena Felix</h3><span class="funcao">Designer de sobrancelhas e depiladora</span><p>Sobrancelha e depilação</p><a href="https://www.instagram.com/lenafelixx/" target="_blank" rel="noopener">@lenafelixx</a></article>
+      <article class="pro" data-area="cabelo"><img src="img/equipe-leticia-costa.jpg" alt="Leticia Costa" loading="lazy"><h3>Leticia Costa</h3><span class="funcao">Cabeleireira</span><p>Cor e tratamentos</p><a href="https://www.instagram.com/leticiaprya/" target="_blank" rel="noopener">@leticiaprya</a></article>
+      <article class="pro" data-area="cabelo"><img src="img/equipe-lilian-catarino.jpg" alt="Lílian Catarino" loading="lazy"><h3>Lílian Catarino</h3><span class="funcao">Cabeleireira</span><p>Cor e corte</p><a href="https://www.instagram.com/lilycatarinoprya/" target="_blank" rel="noopener">@lilycatarinoprya</a></article>
+      <article class="pro" data-area="unhas"><img src="img/equipe-luciana-silva.jpg" alt="Luciana Silva" loading="lazy"><h3>Luciana Silva</h3><span class="funcao">Manicure</span><p>Cutilagem e esmaltação</p><a href="https://www.instagram.com/lusilvaprya/" target="_blank" rel="noopener">@lusilvaprya</a></article>
+      <article class="pro" data-area="unhas"><img src="img/equipe-nagela-souzza.jpg" alt="Nagela Souzza" loading="lazy"><h3>Nagela Souzza</h3><span class="funcao">Nail designer</span><p>Acrigel, fibra e porcelana</p><a href="https://www.instagram.com/nagelasilvaprya/" target="_blank" rel="noopener">@nagelasilvaprya</a></article>
+      <article class="pro" data-area="unhas"><img src="img/equipe-nathalia-nogueira.jpg" alt="Nathalia Nogueira" loading="lazy"><h3>Nathalia Nogueira</h3><span class="funcao">Manicure</span><p>Cutilagem e esmaltação</p><a href="https://www.instagram.com/sejaprya/" target="_blank" rel="noopener">@sejaprya</a></article>
+      <article class="pro" data-area="sobrancelha"><img src="img/equipe-nea-maldonado.jpg" alt="Néa Maldonado" loading="lazy"><h3>Néa Maldonado</h3><span class="funcao">Designer de sobrancelhas e depiladora</span><p>Micropigmentação</p><a href="https://www.instagram.com/neia.maldonado4/" target="_blank" rel="noopener">@neia.maldonado4</a></article>
+      <article class="pro" data-area="cabelo"><img src="img/equipe-neves.jpg" alt="Neves" loading="lazy"><h3>Neves</h3><span class="funcao">Cabeleireira</span><p>Cor e tratamentos</p><a href="https://www.instagram.com/nevesprya/" target="_blank" rel="noopener">@nevesprya</a></article>
+      <article class="pro" data-area="cabelo"><img src="img/equipe-nilton-nunes.jpg" alt="Nilton Nunes" loading="lazy"><h3>Nilton Nunes</h3><span class="funcao">Cabeleireiro</span><p>Cor e corte</p><a href="https://www.instagram.com/niltonnunesmt/" target="_blank" rel="noopener">@niltonnunesmt</a></article>
+      <article class="pro" data-area="unhas"><img src="img/equipe-patricia-castro.jpg" alt="Patrícia Castro" loading="lazy"><h3>Patrícia Castro</h3><span class="funcao">Manicure</span><p>Cutilagem e esmaltação</p><a href="https://www.instagram.com/castropatricia42/" target="_blank" rel="noopener">@castropatricia42</a></article>
+      <article class="pro" data-area="cabelo"><img src="img/equipe-patricia-siqueira.jpg" alt="Patricia Siqueira" loading="lazy"><h3>Patricia Siqueira</h3><span class="funcao">Cabeleireira</span><p>Cor e tratamentos</p><a href="https://www.instagram.com/patysiqueiral/" target="_blank" rel="noopener">@patysiqueiral</a></article>
+      <article class="pro" data-area="unhas"><img src="img/equipe-quele-cunha.jpg" alt="Quele Cunha" loading="lazy"><h3>Quele Cunha</h3><span class="funcao">Nail designer</span><p>Alongamentos</p><a href="https://www.instagram.com/quelecunhaoficial/" target="_blank" rel="noopener">@quelecunhaoficial</a></article>
+      <article class="pro" data-area="cabelo"><img src="img/equipe-rayssa-felisberto.jpg" alt="Rayssa Felisberto" loading="lazy"><h3>Rayssa Felisberto</h3><span class="funcao">Cabeleireira</span><p>Cor, corte e cabelos cacheados</p><a href="https://www.instagram.com/rayssa.felisberto/" target="_blank" rel="noopener">@rayssa.felisberto</a></article>
+      <article class="pro" data-area="unhas"><img src="img/equipe-rose-gomes.jpg" alt="Rose Gomes" loading="lazy"><h3>Rose Gomes</h3><span class="funcao">Manicure</span><p>Cutilagem e esmaltação</p><a href="https://www.instagram.com/rosigomes51/" target="_blank" rel="noopener">@rosigomes51</a></article>
+      <article class="pro" data-area="unhas"><img src="img/equipe-sandra-regina.jpg" alt="Sandra Regina" loading="lazy"><h3>Sandra Regina</h3><span class="funcao">Manicure</span><p>Cutilagem e esmaltação</p><a href="https://www.instagram.com/sandraregina.nails/" target="_blank" rel="noopener">@sandraregina.nails</a></article>
+      <article class="pro" data-area="unhas"><img src="img/equipe-silma-fonseca.jpg" alt="Silma Fonseca" loading="lazy"><h3>Silma Fonseca</h3><span class="funcao">Manicure</span><p>Cutilagem e esmaltação</p><a href="https://www.instagram.com/silmafonseca/" target="_blank" rel="noopener">@silmafonseca</a></article>
+      <article class="pro" data-area="unhas"><img src="img/equipe-simone-felix.jpg" alt="Simone Felix" loading="lazy"><h3>Simone Felix</h3><span class="funcao">Manicure</span><p>Cutilagem, esmaltação e SPA dos pés</p><a href="https://www.instagram.com/simonefelixunhas/" target="_blank" rel="noopener">@simonefelixunhas</a></article>
+      <article class="pro" data-area="unhas"><img src="img/equipe-thaina-azevedo.jpg" alt="Thaina Azevedo" loading="lazy"><h3>Thaina Azevedo</h3><span class="funcao">Nail designer</span><p>Nail art e alongamentos</p><a href="https://www.instagram.com/thaynaazevedo.nails/" target="_blank" rel="noopener">@thaynaazevedo.nails</a></article>
+      <article class="pro" data-area="cabelo"><img src="img/equipe-vinicius-mendes.jpg" alt="Vinicius Mendes" loading="lazy"><h3>Vinicius Mendes</h3><span class="funcao">Cabeleireiro visagista</span><p>Cor, corte e produções</p><a href="https://www.instagram.com/viniciusmendes23/" target="_blank" rel="noopener">@viniciusmendes23</a></article>
+    </div>
+    <div class="mais-wrap" id="mais-wrap">
+      <button type="button" class="btn contorno fx-preencher" id="mais-equipe">Ver equipe completa</button>
+    </div>
+  </div>
+</section>
+
+<div class="sep" aria-hidden="true"><span><svg viewBox="0 0 24 24"><use href="#ico-brilho"/></svg></span></div>
+
+<section class="alt" id="reels">
+  <div class="container">
+    <div class="centro fx-surgir">
+      <span class="eyebrow">Por dentro da Prya</span>
+      <h2 class="titulo">O salão em movimento</h2>
+      <p class="sub">Novidades, bastidores e o nosso jeito de cuidar. Toque em um vídeo para assistir com som.</p>
+    </div>
+    <div class="reels-dest">
+      <button class="reel dest" data-i="0" aria-label="Assistir vídeo Novidade com som"><span class="rv-selo">Novidade</span><video muted loop playsinline preload="none" poster="img/reel-4.jpg" data-src="img/reel-4.mp4"></video><span class="rv-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></button>
+      <button class="reel dest" data-i="1" aria-label="Assistir vídeo Wellness com som"><span class="rv-selo">Wellness</span><video muted loop playsinline preload="none" poster="img/reel-6.jpg" data-src="img/reel-6.mp4"></video><span class="rv-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></button>
+    </div>
+    <div class="reels-fila">
+      <button class="reel" data-i="2" aria-label="Assistir vídeo com som"><video muted loop playsinline preload="none" poster="img/reel-1.jpg" data-src="img/reel-1.mp4"></video><span class="rv-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></button>
+      <button class="reel" data-i="3" aria-label="Assistir vídeo com som"><video muted loop playsinline preload="none" poster="img/reel-2.jpg" data-src="img/reel-2.mp4"></video><span class="rv-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></button>
+      <button class="reel" data-i="4" aria-label="Assistir vídeo com som"><video muted loop playsinline preload="none" poster="img/reel-3.jpg" data-src="img/reel-3.mp4"></video><span class="rv-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></button>
+      <button class="reel" data-i="5" aria-label="Assistir vídeo com som"><video muted loop playsinline preload="none" poster="img/reel-5.jpg" data-src="img/reel-5.mp4"></video><span class="rv-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></button>
+      <button class="reel" data-i="7" aria-label="Assistir vídeo com som"><video muted loop playsinline preload="none" poster="img/reel-8.jpg" data-src="img/reel-8.mp4"></video><span class="rv-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></button>
+        </div>
+  </div>
+</section>
+
+
+<div class="sep" aria-hidden="true"><span><svg viewBox="0 0 24 24"><use href="#ico-brilho"/></svg></span></div>
+
+<section id="trabalho">
+  <div class="container">
+    <div class="centro fx-surgir">
+      <span class="eyebrow">Galeria</span>
+      <h2 class="titulo">Um pouco do nosso universo</h2>
+      <p class="sub">O ambiente, o time e o cuidado que fazem da Prya um lugar para se sentir bem.</p>
+    </div>
+    <div class="galeria">
+      <figure class="fx-surgir"><img src="img/fundo-salao.jpg" alt="Ambiente do salão com as cadeiras de atendimento" loading="lazy"><figcaption>O ambiente</figcaption></figure>
+      <figure class="fx-surgir"><img src="img/time-prya.jpg" alt="O time da Prya" loading="lazy"><figcaption>O time</figcaption></figure>
+      <figure class="fx-surgir"><img src="img/banco-hair-stylist-salon-blow-dry-woman-1.jpg" alt="Finalização de cabelo no salão" loading="lazy"><figcaption>Cabelo</figcaption></figure>
+      <figure class="reel g-video fx-surgir" data-i="6" role="button" tabindex="0" aria-label="Assistir vídeo Nossa vibe com som"><video muted loop playsinline preload="none" poster="img/reel-7.jpg" data-src="img/reel-7.mp4"></video><span class="rv-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><figcaption>Nossa vibe</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<div class="sep" aria-hidden="true"><span><svg viewBox="0 0 24 24"><use href="#ico-brilho"/></svg></span></div>
+
+<section id="depoimentos">
+  <div class="container">
+    <div class="centro fx-surgir">
+      <span class="eyebrow">Avaliações</span>
+      <h2 class="titulo">Quem passou por aqui recomenda</h2>
+    </div>
+    <div class="prova fx-surgir">
+      <div class="grande"><span class="fx-contador" data-valor="4.7" data-casas="1">4,7</span></div>
+      <div class="stars" style="--p:94%" aria-label="Nota 4,7 de 5">★★★★★</div>
+      <p class="total"><span class="fx-contador" data-valor="406">406</span> avaliações no Google</p>
+      <p class="txt">Clientes que viveram o cuidado da Prya contam como foi a experiência.</p>
+      <a class="btn contorno fx-preencher" href="https://www.google.com/maps/search/?api=1&amp;query=Prya+-+Centro+de+Beleza+e+Est%C3%A9tica+Rua+Ator+Paulo+Gustavo+241%2C+Niter%C3%B3i" target="_blank" rel="noopener">Ver avaliações no Google</a>
+    </div>
+  </div>
+</section>
+
+<div class="sep" aria-hidden="true"><span><svg viewBox="0 0 24 24"><use href="#ico-brilho"/></svg></span></div>
+
+<section class="alt contato" id="contato">
+  <div class="container">
+    <span class="eyebrow">Contato</span>
+    <h2 class="titulo fx-revelar">Ser feliz é ser você. Ser feliz é ser Prya.</h2>
+    <p class="sub">Venha viver o cuidado da Prya. Chame a nossa equipe e conte como podemos fazer o seu dia mais bonito.</p>
+    <div class="contato-lista">
+      <a class="btn" href="https://wa.me/5521973867220" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#ico-wa"/></svg>Fale com a gente</a>
+      <a class="btn contorno fx-preencher" href="https://www.instagram.com/sejaprya/" target="_blank" rel="noopener">Instagram @sejaprya</a>
+    </div>
+
+    <div class="info">
+      <div class="info-card fx-surgir">
+        <h3>Onde estamos</h3>
+        <address>Rua Ator Paulo Gustavo, 241 (antiga Rua Coronel Moreira César)<br>Icaraí, Niterói – RJ, CEP 24230-052</address>
+        <a class="btn contorno fx-preencher" href="https://www.google.com/maps/search/?api=1&amp;query=Prya+-+Centro+de+Beleza+e+Est%C3%A9tica+Rua+Ator+Paulo+Gustavo+241%2C+Niter%C3%B3i" target="_blank" rel="noopener">Como chegar</a>
+      </div>
+      <div class="info-card fx-surgir">
+        <h3>Horário</h3>
+        <div class="horas">
+          <div class="linha"><span>Segunda a sábado</span><span>8h às 20h</span></div>
+        </div>
+      </div>
+      <div class="info-card fx-surgir">
+        <h3>Telefone</h3>
+        <a class="tel" href="tel:+552127115500">(21) 2711-5500</a>
+        <a class="btn contorno fx-preencher" href="tel:+552127115500">Ligar agora</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <img src="img/logo.png" alt="Prya - Centro de Beleza e Estética">
+    <p>© Prya - Centro de Beleza e Estética</p>
+    <p class="creditos">Fotos de apoio: <a href="https://pixabay.com/photos/hairdressing-blow-dry-stylist-1516345/" target="_blank" rel="noopener">Jo_Johnston</a>, <a href="https://pixabay.com/photos/eyelashes-makeup-beauty-fashion-315626/" target="_blank" rel="noopener">PublicDomainPictures</a>, <a href="https://pixabay.com/photos/nails-manicure-fingers-design-3138390/" target="_blank" rel="noopener">hiephale</a> e <a href="https://pixabay.com/photos/woman-beauty-glamour-makeup-6580317/" target="_blank" rel="noopener">IqbalStock</a>, no Pixabay.</p>
+  </div>
+</footer>
+
+<a class="zap" href="https://wa.me/5521973867220" target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ico-wa"/></svg>
+</a>
+
+<script>
+/* Equipe: filtro por área e botão "Ver equipe completa" */
+(function(){
+  var cards = [].slice.call(document.querySelectorAll('.pro'));
+  var chips = [].slice.call(document.querySelectorAll('.chip'));
+  var mais = document.getElementById('mais-equipe');
+  var wrap = document.getElementById('mais-wrap');
+  var filtro = 'todas', aberto = false, LIMITE = 8;
+
+  function render(){
+    cards.forEach(function(c, i){
+      var ok = filtro === 'todas' || c.getAttribute('data-area') === filtro;
+      var visivel = ok && (filtro !== 'todas' || aberto || i < LIMITE);
+      c.hidden = !visivel;
+    });
+    wrap.hidden = (filtro !== 'todas' || aberto);
+  }
+  chips.forEach(function(chip){
+    chip.addEventListener('click', function(){
+      filtro = chip.getAttribute('data-filtro');
+      chips.forEach(function(c){
+        var ativo = c === chip;
+        c.classList.toggle('ativo', ativo);
+        c.setAttribute('aria-pressed', ativo ? 'true' : 'false');
+      });
+      render();
+    });
+  });
+  mais.addEventListener('click', function(){ aberto = true; render(); });
+  render();
+})();
+</script>
+<script>
+/* Abre o site sempre no topo: os reels do Instagram e o navegador às vezes rolam a página sozinhos. */
+(function(){
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  if (location.hash) return;
+  var mexeu = false;
+  ['wheel','touchstart','keydown','mousedown'].forEach(function(e){
+    window.addEventListener(e, function(){ mexeu = true; }, {passive:true, once:true});
+  });
+  function topo(){ if (!mexeu && window.scrollY > 0) window.scrollTo({top:0, behavior:'instant'}); }
+  topo();
+  var fim = Date.now() + 4000;
+  var t = setInterval(function(){ topo(); if (mexeu || Date.now() > fim) clearInterval(t); }, 150);
+})();
+</script>
+<script id="fx-scripts">
+if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+document.querySelectorAll('.fx-revelar').forEach(function(el){
+  var i=0; el.innerHTML=el.textContent.trim().split(/\s+/).map(function(p){
+    return '<span class="fx-palavra" style="--i:'+(i++)+'">'+p+'</span>';}).join(' ');
+});
+(function(){var itens=document.querySelectorAll('.fx-surgir');
+  itens.forEach(function(el){var irmaos=[].filter.call(el.parentElement.children,function(c){return c.classList.contains('fx-surgir');});
+    el.style.setProperty('--fx-i',Math.min(irmaos.indexOf(el),6));});
+  if(!('IntersectionObserver' in window)){itens.forEach(function(el){el.classList.add('fx-visivel');});return;}
+  var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('fx-visivel');obs.unobserve(e.target);}});},{threshold:.12});
+  itens.forEach(function(el){obs.observe(el);});})();
+(function(){function rodar(el){var alvo=parseFloat(el.dataset.valor),casas=+(el.dataset.casas||0),t0=null;
+    function passo(t){t0=t0||t;var p=Math.min((t-t0)/1400,1),v=alvo*(1-Math.pow(1-p,3));
+      el.textContent=v.toLocaleString('pt-BR',{minimumFractionDigits:casas,maximumFractionDigits:casas});if(p<1)requestAnimationFrame(passo);}
+    requestAnimationFrame(passo);}
+  var els=document.querySelectorAll('.fx-contador');
+  if(!('IntersectionObserver' in window)) return;
+  var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){rodar(e.target);obs.unobserve(e.target);}});},{threshold:.5});
+  els.forEach(function(el){obs.observe(el);});})();
+document.querySelectorAll('.fx-preencher').forEach(function(el){
+  el.addEventListener('mouseenter',function(e){var r=el.getBoundingClientRect();
+    el.style.setProperty('--fx-x',(e.clientX-r.left)+'px'); el.style.setProperty('--fx-y',(e.clientY-r.top)+'px');});
+});
+}
+</script>
+<div class="rv-modal" id="rv-modal" role="dialog" aria-modal="true" aria-label="Vídeo">
+  <video id="rv-video" controls playsinline></video>
+  <button class="rv-fechar" aria-label="Fechar">&times;</button>
+  <button class="rv-ant" aria-label="Vídeo anterior">&#8249;</button>
+  <button class="rv-prox" aria-label="Próximo vídeo">&#8250;</button>
+</div>
+<script>
+(function(){
+  var ab=document.getElementById('abertura');
+  if(ab){ab.addEventListener('animationend',function(e){if(e.animationName==='ab-sobe')ab.remove();});setTimeout(function(){if(ab.parentNode)ab.remove();},4000);}
+  var cards=[].slice.call(document.querySelectorAll('.reel'));
+  var calmo=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var modal=document.getElementById('rv-modal'),mv=document.getElementById('rv-video'),atual=0;
+  function carrega(v){if(!v.src)v.src=v.dataset.src;}
+  if('IntersectionObserver' in window){
+    var obs=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;
+      if(e.isIntersecting&&!calmo&&!modal.classList.contains('aberto')){carrega(v);var p=v.play();if(p)p.catch(function(){});}else{v.pause();}
+    });},{threshold:.5});
+    cards.forEach(function(c){obs.observe(c.querySelector('video'));});
+  }
+  function abre(i){atual=(i+cards.length)%cards.length;
+    cards.forEach(function(c){c.querySelector('video').pause();});
+    var v=cards.filter(function(c){return +c.dataset.i===atual;})[0].querySelector('video');
+    mv.src=v.dataset.src;mv.poster=v.poster;mv.muted=false;modal.classList.add('aberto');document.body.style.overflow='hidden';
+    var p=mv.play();if(p)p.catch(function(){});
+  }
+  function fecha(){mv.pause();mv.removeAttribute('src');mv.load();modal.classList.remove('aberto');document.body.style.overflow='';}
+  cards.forEach(function(c){c.addEventListener('click',function(){abre(+c.dataset.i);});});
+  modal.querySelector('.rv-fechar').addEventListener('click',fecha);
+  modal.querySelector('.rv-ant').addEventListener('click',function(){abre(atual-1);});
+  modal.querySelector('.rv-prox').addEventListener('click',function(){abre(atual+1);});
+  modal.addEventListener('click',function(e){if(e.target===modal)fecha();});
+  mv.addEventListener('ended',function(){abre(atual+1);});
+  document.addEventListener('keydown',function(e){if(!modal.classList.contains('aberto'))return;
+    if(e.key==='Escape')fecha();if(e.key==='ArrowRight')abre(atual+1);if(e.key==='ArrowLeft')abre(atual-1);});
+})();
+</script>
+<style>
+.galeria .g-video{border:0;padding:0;margin:0;cursor:pointer}
+.galeria .g-video video{width:100%;height:100%;object-fit:cover;display:block}
+.galeria .g-video::after{display:none}
+.galeria .g-video figcaption{z-index:1}
+.galeria .g-video .rv-play{top:12px;right:12px;bottom:auto}
+.galeria .g-video:focus-visible{outline:3px solid var(--dourado);outline-offset:3px}
+</style>
+<script>document.addEventListener('keydown',function(e){var t=e.target;if(t.classList&&t.classList.contains('g-video')&&(e.key==='Enter'||e.key===' ')){e.preventDefault();t.click();}});</script>
+</body>
+</html>
